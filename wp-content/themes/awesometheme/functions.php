@@ -24,5 +24,14 @@ function awesome_script_enqueue(){
  * 3. (optional) Priority, order in which functions are called. The lower the number, the earlier it will be called.
  * 4. The number of arguments the funcion will accept.
  */
-add_action('wp_enqueue_scripts', 'awesome_script_enqueue')
+add_action('wp_enqueue_scripts', 'awesome_script_enqueue');
+
+function awesome_theme_setup(){
+    add_theme_support('menus');
+
+    register_nav_menu('primary', 'Primary Header Navigation');
+    register_nav_menu('secondary', 'Footer Navigation');
+}
+
+add_action('init', 'awesome_theme_setup');
 ?>
