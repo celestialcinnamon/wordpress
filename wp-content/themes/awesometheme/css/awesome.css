@@ -29,20 +29,24 @@ body{
 
 .post-header{
     padding: 20px;
+    padding-bottom: 0;
 }
 
 .post-title{
     font-weight: lighter;
     font-size: 2rem;
+    margin: 3px;
 }
 
 .post-body{
     padding: 20px;
+    padding-top:0;
 }
 
 .post-categories {
     display: flex;
     padding: 0;
+    margin: 0;
 }
 
 .post-categories li{
