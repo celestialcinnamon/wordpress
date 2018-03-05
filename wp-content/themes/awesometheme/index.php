@@ -6,7 +6,8 @@
         <div class="post">
             <div class="post-header">
                 <h3 class="post-title"><?php the_title() ?></h3>
-                <small>Posted on <?php the_time();?></small>
+                <small>Posted on <?php the_time('F j, Y');?> at <?php the_time('g:i a');?></small>
+                <span>in <?php the_category(); ?></span>
             </div>
 
             <div class="post-body"><?php the_content(); ?></div>
