@@ -34,4 +34,12 @@ function awesome_theme_setup(){
 }
 
 add_action('init', 'awesome_theme_setup');
+
+/**
+ * Check if a loop has any more posts left
+ */
+function wpdocs_has_more_posts(){
+    global $wp_query;
+    return $wp_query->current_post + 1 < $wp_query->post_count;
+}
 ?>
